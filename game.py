@@ -30,7 +30,7 @@ def main():
 
         if guesses == 0:
             print("Out of guesses buddy!")
-            brake 
+            break
 
 
 if __name__ == "__main__":
