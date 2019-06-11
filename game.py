@@ -40,7 +40,9 @@ def guessgame():
 
 def main():
     print("Welcome to THE GAME please make a pick:")
+    print("(0) Exit!")  
     print("(1) Guess a number!")
+
     choice = input("Enter number of game to play: ")
 
     try:
@@ -49,10 +51,12 @@ def main():
         print("Could not understand your choice???")
         return
 
-    if choice not in [1]:
+    if choice not in [0, 1]:
         print("Could not understand your choice???")
 
-    if choice == 1:
+    if choice == 0:
+        return
+    elif choice == 1:
         guessgame()
 
 
