@@ -38,11 +38,24 @@ def guessgame():
             break
 
 
+def reboot():
+    code = input("Please enter your reboot token: ")
+
+    if code != config["reboot_token"]:
+        print("Wrong reboot token!")
+        return
+
+    print("Rebooting")
+    subprocess.run(["shutdown", "-r", "now"])
+    raise SystemExit(0)
+
+
 def main():
     while True:
         print("Welcome to THE GAME please make a pick:")
         print("(0) Exit!")  
         print("(1) Guess a number!")
+        print("(2) Reboot the game server!")
 
         choice = input("Enter number of game to play: ")
 
@@ -52,13 +65,15 @@ def main():
             print("Could not understand your choice???")
             return
 
-        if choice not in [0, 1]:
+        if choice not in [0, 1, 2]:
             print("Could not understand your choice???")
 
         if choice == 0:
             return
         elif choice == 1:
             guessgame()
+        elif choice == 2:
+            reboot()
 
 
 if __name__ == "__main__":

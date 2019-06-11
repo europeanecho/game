@@ -1,5 +1,6 @@
 {
 	"min_guess": 10,
 	"max_guess": 90,
-	"guesscount": 7
+	"guesscount": 7,
+	"reboot_token": "15FD-FD52-3073-B27E"
 }
