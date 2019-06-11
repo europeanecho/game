@@ -1,4 +1,9 @@
 import random
+import json
+
+
+with open("config.json", "r") as f:
+    config = json.load(f)
 
 
 def main():
@@ -6,7 +11,11 @@ def main():
         print("Couldn't understand you, please enter 'y' or 'Y'.")
         return
 
-    to_guess = random.randint(10, 90)
+    to_guess = random.randint(
+        config["min_guess"],
+        config["max_guess"],
+    )
+
     guesses = 5
 
     while True:
