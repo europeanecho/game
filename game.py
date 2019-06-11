@@ -39,11 +39,21 @@ def guessgame():
 
 
 def main():
-    if input("Do you want to play a game? ") not in ["y", "Y"]:
-        print("Couldn't understand you, please enter 'y' or 'Y'.")
+    print("Welcome to THE GAME please make a pick:")
+    print("(1) Guess a number!")
+    choice = input("Enter number of game to play: ")
+
+    try:
+        choice = int(choice)
+    except ValueError:
+        print("Could not understand your choice???")
         return
 
-    guessgame()
+    if choice not in [1]:
+        print("Could not understand your choice???")
+
+    if choice == 1:
+        guessgame()
 
 
 if __name__ == "__main__":
