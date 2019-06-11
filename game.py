@@ -6,11 +6,7 @@ with open("config.json", "r") as f:
     config = json.load(f)
 
 
-def main():
-    if input("Do you want to play a game? ") not in ["y", "Y"]:
-        print("Couldn't understand you, please enter 'y' or 'Y'.")
-        return
-
+def guessgame():
     to_guess = random.randint(
         config["min_guess"],
         config["max_guess"],
@@ -40,6 +36,14 @@ def main():
         if guesses == 0:
             print("Out of guesses buddy!")
             break
+
+
+def main():
+    if input("Do you want to play a game? ") not in ["y", "Y"]:
+        print("Couldn't understand you, please enter 'y' or 'Y'.")
+        return
+
+    guessgame()
 
 
 if __name__ == "__main__":
