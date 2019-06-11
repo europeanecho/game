@@ -39,25 +39,26 @@ def guessgame():
 
 
 def main():
-    print("Welcome to THE GAME please make a pick:")
-    print("(0) Exit!")  
-    print("(1) Guess a number!")
+    while True:
+        print("Welcome to THE GAME please make a pick:")
+        print("(0) Exit!")  
+        print("(1) Guess a number!")
 
-    choice = input("Enter number of game to play: ")
+        choice = input("Enter number of game to play: ")
 
-    try:
-        choice = int(choice)
-    except ValueError:
-        print("Could not understand your choice???")
-        return
+        try:
+            choice = int(choice)
+        except ValueError:
+            print("Could not understand your choice???")
+            return
 
-    if choice not in [0, 1]:
-        print("Could not understand your choice???")
+        if choice not in [0, 1]:
+            print("Could not understand your choice???")
 
-    if choice == 0:
-        return
-    elif choice == 1:
-        guessgame()
+        if choice == 0:
+            return
+        elif choice == 1:
+            guessgame()
 
 
 if __name__ == "__main__":
