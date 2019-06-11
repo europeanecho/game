@@ -1,6 +1,5 @@
 {
 	"min_guess": 100,
 	"max_guess": 900,
-	"guesscount": 13,
-	"reboot_token": "your-reboot-token"
+	"guesscount": 13
 }
