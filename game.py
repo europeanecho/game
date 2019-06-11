@@ -16,7 +16,7 @@ def main():
         config["max_guess"],
     )
 
-    guesses = 5
+    guesses = config["guesscount"]
 
     while True:
         print(f"You have {guesses} left, what is your guess?")

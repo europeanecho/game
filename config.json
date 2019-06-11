@@ -1,4 +1,5 @@
 {
 	"min_guess": 10,
-	"max_guess": 90
+	"max_guess": 90,
+	"guesscount": 7
 }
